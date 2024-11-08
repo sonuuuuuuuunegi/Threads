@@ -8,11 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "packageManager": "npm@10.5.2",
-  "overrides": {
-    "react": "$react",
-    "react-dom": "$react-dom"
-  },
+  
   "dependencies": {
     "@clerk/nextjs": "^6.2.1",
     "@clerk/themes": "^2.1.41",
