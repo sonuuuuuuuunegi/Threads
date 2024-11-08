@@ -69,9 +69,9 @@ export const POST = async (request: Request) => {
       evnt?.data ?? {};
 
     try {
-      // @ts-ignore
+      
       await createCommunity(
-        // @ts-ignore
+       
         id,
         name,
         slug,
@@ -120,7 +120,7 @@ export const POST = async (request: Request) => {
       const { organization, public_user_data } = evnt?.data;
       console.log("created", evnt?.data);
 
-      // @ts-ignore
+     
       await addMemberToCommunity(organization.id, public_user_data.user_id);
 
       return NextResponse.json(
@@ -145,7 +145,7 @@ export const POST = async (request: Request) => {
       const { organization, public_user_data } = evnt?.data;
       console.log("removed", evnt?.data);
 
-      // @ts-ignore
+     
       await removeUserFromCommunity(public_user_data.user_id, organization.id);
 
       return NextResponse.json({ message: "Member removed" }, { status: 201 });
@@ -167,7 +167,7 @@ export const POST = async (request: Request) => {
       const { id, logo_url, name, slug } = evnt?.data;
       console.log("updated", evnt?.data);
 
-      // @ts-ignore
+     
       await updateCommunityInfo(id, name, slug, logo_url);
 
       return NextResponse.json({ message: "Member removed" }, { status: 201 });
@@ -189,7 +189,7 @@ export const POST = async (request: Request) => {
       const { id } = evnt?.data;
       console.log("deleted", evnt?.data);
 
-      // @ts-ignore
+    
       await deleteCommunity(id);
 
       return NextResponse.json(
